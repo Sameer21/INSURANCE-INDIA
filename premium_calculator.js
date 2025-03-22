@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('isLoggedIn') !== 'true') {
         window.location.href = 'index.html';
     }
-    
+    document.getElementById('user-name').textContent = 'Sameer';
     // Get URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const vehicleType = urlParams.get('vehicle') || 'cars';
@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize premium display
     updatePremiumDisplay();
+    
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'index.html';
+    });
     
     // Add event listeners to all form inputs
     const formInputs = document.querySelectorAll('#premium-form input, #premium-form select');
