@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United India Insurance - Premium Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="premium_calculator.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="United India Insurance Logo" class="logo">
+            <h1>United India Insurance</h1>
+        </div>
+        <div class="user-menu">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a> &gt; 
+            <a href="motor.html">Motor Insurance</a> &gt; 
+            Premium Calculator
+        </div>
+        
+        <h2 class="section-title">Insurance Premium Calculator</h2>
+        <h3 class="subsection-title">for <span id="vehicle-type-heading">CAR</span></h3>
+        
+        <div class="calculator-container">
+            <form id="premium-form">
+                <div class="form-section">
+                    <h4>Vehicle Details</h4>
+                    
+                    <div class="form-group">
+                        <label for="vehicle-type">Vehicle Type</label>
+                        <select id="vehicle-type" name="vehicle-type" required>
+                            <option value="cars">Car</option>
+                            <option value="pcv">PCV</option>
+                            <option value="ev">Electric Vehicle</option>
+                            <option value="trucks">Truck</option>
+                            <option value="plane">Plane</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicle-age">Vehicle Age (years)</label>
+                        <input type="number" id="vehicle-age" name="vehicle-age" min="0" max="20" value="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicle-value">Vehicle Value (₹)</label>
+                        <input type="number" id="vehicle-value" name="vehicle-value" min="50000" max="10000000" value="500000" required>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h4>Coverage Type</h4>
+                    
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="package-option" name="coverage" value="package" checked>
+                            <label for="package-option">Comprehensive Package</label>
+                        </div>
+                        
+                        <div class="radio-option">
+                            <input type="radio" id="liability-option" name="coverage" value="liability">
+                            <label for="liability-option">Third Party Liability Only</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h4>Add-on Covers</h4>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="zero-depreciation" name="addons" value="zero-depreciation">
+                            <label for="zero-depreciation">Zero Depreciation</label>
+                        </div>
+                        
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="roadside-assistance" name="addons" value="roadside-assistance">
+                            <label for="roadside-assistance">24x7 Roadside Assistance</label>
+                        </div>
+                        
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="engine-protection" name="addons" value="engine-protection">
+                            <label for="engine-protection">Engine Protection Cover</label>
+                        </div>
+                        
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="passenger-cover" name="addons" value="passenger-cover">
+                            <label for="passenger-cover">Passenger Cover</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h4>Driver Details</h4>
+                    
+                    <div class="form-group">
+                        <label for="driver-age">Driver Age (years)</label>
+                        <input type="number" id="driver-age" name="driver-age" min="18" max="80" value="30" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="driving-experience">Driving Experience (years)</label>
+                        <input type="number" id="driving-experience" name="driving-experience" min="0" max="50" value="5" required>
+                    </div>
+                    
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="no-claims-bonus" name="no-claims-bonus" value="true">
+                        <label for="no-claims-bonus">No Claims in Past Year</label>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button type="button" id="back-btn" class="btn btn-secondary">Back</button>
+                    <button type="submit" id="calculate-btn" class="btn btn-primary">Calculate Premium</button>
+                </div>
+            </form>
+            
+            <div id="premium-results" class="premium-results">
+                <h4>Premium Breakdown</h4>
+                
+                <div class="premium-breakdown">
+                    <div class="premium-row">
+                        <span class="premium-label">Base Premium:</span>
+                        <span id="base-premium" class="premium-value">₹0</span>
+                    </div>
+                    
+                    <div class="premium-row">
+                        <span class="premium-label">Add-ons:</span>
+                        <span id="addons-cost" class="premium-value">₹0</span>
+                    </div>
+                    
+                    <div class="premium-row">
+                        <span class="premium-label">Discounts:</span>
+                        <span id="discount-amount" class="premium-value">₹0</span>
+                    </div>
+                    
+                    <div class="premium-row total">
+                        <span class="premium-label">Total Premium:</span>
+                        <span id="total-premium" class="premium-value">₹0</span>
+                    </div>
+                </div>
+                
+                <button type="button" id="proceed-btn" class="btn btn-success">Proceed to Payment</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 United India Insurance Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="premium_calculator.js"></script>
+</body>
+</html>
