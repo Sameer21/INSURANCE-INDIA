@@ -53,12 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Quote button functionality
-    const quoteButtons = document.querySelectorAll('.get-quote-btn');
+   const quoteButtons = document.querySelectorAll('.get-quote-btn');
     
     quoteButtons.forEach(btn => {
         btn.addEventListener('click', function() {
             const optionType = this.closest('.option-details').id.replace('-details', '');
-            alert(`Getting quote for ${optionType.toUpperCase()} insurance. This feature is under development.`);
+            // Redirect to the premium calculator page
+            window.location.href = 'premium_calculator.html';
+
         });
     });
 });
