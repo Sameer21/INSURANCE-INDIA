@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United India Insurance - Motor Insurance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="motor.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="United India Insurance Logo" class="logo">
+            <h1>United India Insurance</h1>
+        </div>
+        <div class="user-menu">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a> &gt; Motor Insurance
+        </div>
+        
+        <h2 class="section-title">Motor Insurance</h2>
+        
+        <div class="vehicle-types">
+            <div class="vehicle-card" data-type="cars">
+                <img src="cars.jpeg" alt="Car Icon" class="vehicle-icon">
+                <h3>CARS</h3>
+                <p>Insurance for private cars, SUVs, and sedan vehicles.</p>
+            </div>
+            
+            <div class="vehicle-card" data-type="pcv">
+                <img src="auto.jpeg" alt="PCV Icon" class="vehicle-icon">
+                <h3>PCV</h3>
+                <p>Passenger Carrying Vehicles like buses and taxis.</p>
+            </div>
+            
+            <div class="vehicle-card" data-type="ev">
+                <img src="EV.jpeg" alt="EV Icon" class="vehicle-icon">
+                <h3>EV</h3>
+                <p>Special coverage for Electric Vehicles.</p>
+            </div>
+            
+            <div class="vehicle-card" data-type="trucks">
+                <img src="trucks.jpeg" alt="Truck Icon" class="vehicle-icon">
+                <h3>TRUCKS</h3>
+                <p>Commercial goods carrying vehicles.</p>
+            </div>
+            
+            <div class="vehicle-card" data-type="plane">
+                <img src="plane.jpeg" alt="Plane Icon" class="vehicle-icon">
+                <h3>PLANE</h3>
+                <p>Aviation insurance for aircraft.</p>
+            </div>
+        </div>
+        
+        <div id="car-options" class="insurance-options-container">
+            <h3>CAR Insurance Options</h3>
+            <div class="option-selector">
+                <button class="option-btn active" data-option="package">PACKAGE</button>
+                <button class="option-btn" data-option="liability">LIABILITY</button>
+            </div>
+            
+            <div id="package-details" class="option-details active">
+                <h4>Comprehensive Package Coverage</h4>
+                <ul>
+                    <li>Own damage cover for your vehicle</li>
+                    <li>Third-party liability coverage</li>
+                    <li>Personal accident cover for owner/driver</li>
+                    <li>Additional covers for passengers, electrical/electronic items</li>
+                    <li>Zero depreciation option available</li>
+                </ul>
+                <button class="btn btn-primary get-quote-btn">Get Quote</button>
+            </div>
+            
+            <div id="liability-details" class="option-details">
+                <h4>Third Party Liability Coverage</h4>
+                <ul>
+                    <li>Mandatory third-party liability coverage</li>
+                    <li>Protection against legal liability for third-party injuries/death</li>
+                    <li>Coverage for third-party property damage</li>
+                    <li>No coverage for own vehicle damage</li>
+                </ul>
+                <button class="btn btn-primary get-quote-btn">Get Quote</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 United India Insurance Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="motor.js"></script>
+</body>
+</html>

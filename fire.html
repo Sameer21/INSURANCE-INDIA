@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United India Insurance - Fire Insurance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fire.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="United India Insurance Logo" class="logo">
+            <h1>United India Insurance</h1>
+        </div>
+        <div class="user-menu">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a> &gt; Fire Insurance
+        </div>
+        
+        <h2 class="section-title">Fire Insurance</h2>
+        
+        <div class="fire-insurance-content">
+            <div class="fire-info">
+                <h3>Protect Your Property Against Fire & Allied Perils</h3>
+                <p>Our fire insurance provides comprehensive protection for your buildings and contents against fire and allied perils such as lightning, explosion, impact damage, natural disasters, and more.</p>
+                
+                <div class="coverage-types">
+                    <div class="coverage-item">
+                        <h4>Standard Fire and Special Perils Policy</h4>
+                        <p>Protects your home, office, factory, or commercial property against fire, lightning, explosion, impact damage, natural disasters, and more.</p>
+                    </div>
+                    
+                    <div class="coverage-item">
+                        <h4>Consequential Loss (Fire) Insurance</h4>
+                        <p>Covers loss of profit and standing charges following a fire or other covered peril, helping businesses recover from interruptions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="property-form">
+                <h3>Get a Fire Insurance Quote</h3>
+                <form id="fire-quote-form">
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" required>
+                            <option value="">Select Property Type</option>
+                            <option value="residential">Residential Building</option>
+                            <option value="commercial">Commercial Building</option>
+                            <option value="industrial">Industrial Property</option>
+                            <option value="warehouse">Warehouse</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="construction-type">Construction Type</label>
+                        <select id="construction-type" required>
+                            <option value="">Select Construction Type</option>
+                            <option value="pucca">Pucca (RCC/Brick Construction)</option>
+                            <option value="semi-pucca">Semi-Pucca</option>
+                            <option value="kutcha">Kutcha</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-value">Property Value (₹)</label>
+                        <input type="number" id="property-value" placeholder="Property value in INR" min="100000" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contents-value">Contents Value (₹)</label>
+                        <input type="number" id="contents-value" placeholder="Contents value in INR" min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-age">Property Age (Years)</label>
+                        <input type="number" id="property-age" placeholder="Age of property in years" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Coverages</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="additional-coverage" value="earthquake"> Earthquake
+                            </label>
+                            <label>
+                                <input type="checkbox" name="additional-coverage" value="terrorism"> Terrorism
+                            </label>
+                            <label>
+                                <input type="checkbox" name="additional-coverage" value="riot"> Riot, Strike, Malicious Damage
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Calculate Premium</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 United India Insurance Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="fire.js"></script>
+</body>
+</html>

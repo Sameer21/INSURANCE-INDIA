@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United India Insurance - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="United India Insurance Logo" class="logo">
+            <h1>United India Insurance</h1>
+        </div>
+        <div class="user-menu">
+            <span id="user-name">User</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </header>
+    
+    <main class="container">
+        <h2 class="section-title">Insurance Products</h2>
+        <div class="insurance-options">
+            <div class="insurance-card" id="motor-card">
+                <img src="moto_insu.png" alt="Motor Insurance Icon" class="insurance-icon">
+                <h3>MOTOR</h3>
+                <p>Insurance for your vehicles - cars, bikes, commercial vehicles, and more.</p>
+                <a href="motor.html" class="btn btn-primary">Explore</a>
+            </div>
+            
+            <div class="insurance-card" id="health-card">
+                <img src="health.png" alt="Health Insurance Icon" class="insurance-icon">
+                <h3>HEALTH</h3>
+                <p>Protection for you and your family's medical expenses.</p>
+                <a href="health.html" class="btn btn-primary">Explore</a>
+            </div>
+            
+            <div class="insurance-card" id="fire-card">
+                <img src="fire.png" alt="Fire Insurance Icon" class="insurance-icon">
+                <h3>FIRE</h3>
+                <p>Coverage for your property against fire and allied perils.</p>
+                <a href="fire.html" class="btn btn-primary">Explore</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 United India Insurance Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

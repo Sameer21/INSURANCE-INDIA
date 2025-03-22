@@ -1,0 +1,139 @@
+/* Fire Insurance Specific Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#user-name {
+    font-weight: 600;
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.section-title {
+    color: #003366;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.fire-insurance-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .fire-insurance-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fire-info {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.fire-info h3 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.fire-info > p {
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.coverage-types {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.coverage-item {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #cc6600;
+}
+
+.coverage-item h4 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.coverage-item p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.property-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.property-form h3 {
+    color: #003366;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group select,
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.property-form .btn {
+    width: 100%;
+    margin-top: 1rem;
+}
